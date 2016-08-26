@@ -1,0 +1,11 @@
+Feature: Login
+  Test login functionality
+
+  Scenario: Login as user
+    Given ZohoCRM main page is loaded
+    When I login as user "bhooms87@gmail.com" with password "P@ssw0rd"
+    Then I see options for "user"
+
+  @deinit
+  Scenario: Cleanup web-app instance
+    Given No-op
